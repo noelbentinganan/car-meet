@@ -1,6 +1,6 @@
-# Getting Started with Create React App
+# Car Meet App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Description: Buy, sell, or rent vehicles near you.
 
 ## Available Scripts
 
