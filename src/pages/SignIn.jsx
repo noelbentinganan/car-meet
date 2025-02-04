@@ -1,4 +1,5 @@
 import { useState } from "react";
+// firebase imports
 
 const SignIn = () => {
   // formData
@@ -18,8 +19,8 @@ const SignIn = () => {
   const onSubmit = (e) => {
     e.preventDefault();
 
-    const data = { email, password }; // For testing - get the data that has been input to email and password
-    console.log(data);
+    // const data = { email, password }; // For testing - get the data that has been input to email and password
+    // console.log(data);
   };
 
   return (

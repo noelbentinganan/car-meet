@@ -3,7 +3,7 @@ import { getAnalytics } from "firebase/analytics";
 import { getFirestore } from "firebase/firestore";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyDLR4R66b0UL9KAa9V3Dtn3g-lZzAmhsvQ",
+  apiKey: process.env.FIREBASE_API_KEY,
   authDomain: "car-meet-effc2.firebaseapp.com",
   projectId: "car-meet-effc2",
   storageBucket: "car-meet-effc2.firebasestorage.app",
