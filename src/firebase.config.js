@@ -1,9 +1,9 @@
 import { initializeApp } from "firebase/app";
-import { getAnalytics } from "firebase/analytics";
+// import { getAnalytics } from "firebase/analytics";
 import { getFirestore } from "firebase/firestore";
 
 const firebaseConfig = {
-  apiKey: process.env.FIREBASE_API_KEY,
+  apiKey: "AIzaSyDLR4R66b0UL9KAa9V3Dtn3g-lZzAmhsvQ",
   authDomain: "car-meet-effc2.firebaseapp.com",
   projectId: "car-meet-effc2",
   storageBucket: "car-meet-effc2.firebasestorage.app",
@@ -13,6 +13,7 @@ const firebaseConfig = {
 };
 
 // Initialize Firebase
-const app = initializeApp(firebaseConfig);
+// initializeApp(firebaseConfig);
+initializeApp(firebaseConfig);
 export const db = getFirestore();
-const analytics = getAnalytics(app);
+// const analytics = getAnalytics(app);
