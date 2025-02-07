@@ -8,6 +8,7 @@ import {
 } from "firebase/auth";
 import { setDoc, doc, serverTimestamp } from "firebase/firestore";
 import { db } from "../firebase.config";
+import GoogleOAuth from "../components/GoogleOAuth";
 
 const SignUp = () => {
   // User form data
@@ -65,7 +66,7 @@ const SignUp = () => {
 
       console.log(formDataCopy);
 
-      navigate("/");
+      navigate("/edit-profile");
     } catch (error) {
       console.log(error);
     }
@@ -113,6 +114,7 @@ const SignUp = () => {
 
         <button>Sign Up</button>
       </form>
+      <GoogleOAuth />
     </div>
   );
 };

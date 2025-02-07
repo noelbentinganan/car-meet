@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
 // firebase imports
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
+import GoogleOAuth from "../components/GoogleOAuth";
 
 const SignIn = () => {
   // formData
@@ -67,8 +68,13 @@ const SignIn = () => {
         />
 
         <Link to="/forgot-password">Forgot Password</Link>
-        <button>Submit</button>
+        <button>Sign In</button>
       </form>
+      <Link to="/sign-up" className="registerLink">
+        Sign Up Instead
+      </Link>
+
+      <GoogleOAuth />
     </>
   );
 };

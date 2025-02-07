@@ -13,6 +13,7 @@ const PrivateRoute = () => {
   }
 
   // If loggedIn is true, go to Outlet, else direct the user to /sign-in
+  // This will check if a user will go to an unauthorized url, this will redirect them to the /sign-in page
   return loggedIn ? <Outlet /> : <Navigate to="/sign-in" />;
 };
 

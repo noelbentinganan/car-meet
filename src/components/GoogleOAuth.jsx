@@ -9,25 +9,39 @@ const GoogleOAuth = () => {
   const location = useLocation();
 
   const onGoogleClick = async () => {
-    // Initialize resources
-    const auth = getAuth();
-    // Instatiate GoogleAuthProvider fn
-    const provider = new GoogleAuthProvider();
+    try {
+      // Initialize resources
+      const auth = getAuth();
+      // Instatiate GoogleAuthProvider fn
+      const provider = new GoogleAuthProvider();
 
-    // Result
-    const result = await signInWithPopup(auth, provider);
-    const user = result.user;
+      // Result
+      const result = await signInWithPopup(auth, provider);
+      const user = result.user;
 
-    const docRef = doc(db, "users", user.uid);
-    const docSnap = await getDoc(docRef);
+      const docRef = doc(db, "users", user.uid);
+      const docSnap = await getDoc(docRef);
 
-    // Validation
-    // Continue hereeeee
+      // Validation - if the snap doest exist or the user does not exist - then, CREATE google user
+      if (!docSnap.exists()) {
+        await setDoc(doc(db, "users", user.uid), {
+          name: user.displayName,
+          email: user.email,
+          timestamp: serverTimestamp(),
+        });
+      }
+
+      navigate("/edit-profile");
+    } catch (error) {
+      console.log(error);
+    }
   };
   return (
     <div>
-      <p>Sign in with {location.pathname === "/sign-up" ? "up" : "in"}</p>
-      <button onClick={onGoogleClick}>Google Btn</button>
+      <p>
+        Sign {location.pathname === "/sign-up" ? "up" : "in"} with{" "}
+        <button onClick={onGoogleClick}>Google</button>
+      </p>
     </div>
   );
 };
