@@ -5,8 +5,7 @@ import { doc, getDoc } from "firebase/firestore";
 import { db } from "../firebase.config";
 
 const UserProfile = () => {
-  // Get the current logged in user
-  const auth = getAuth();
+  const auth = getAuth(); // <-- Initialize getAuth() to get the currentUser
 
   const [changeDetails, setChangeDetails] = useState(false);
   const [userData, setUserData] = useState(null);
@@ -43,11 +42,18 @@ const UserProfile = () => {
           <input
             type="text"
             id="name"
-            disabled={!changeDetails}
+            disabled={changeDetails}
             value={name}
             onChange={onChange}
           />
-          <p>{userData.lastName}</p>
+          <input
+            type="text"
+            id="address"
+            disabled={changeDetails}
+            value={userData?.address || ""}
+            onChange={onChange}
+          />
+          <p>{userData?.address}</p>
         </form>
       </div>
     </div>

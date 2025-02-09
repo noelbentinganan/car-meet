@@ -31,7 +31,7 @@ const GoogleOAuth = () => {
         });
       }
 
-      navigate("/edit-profile");
+      navigate("/user-profile");
     } catch (error) {
       console.log(error);
     }

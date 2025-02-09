@@ -66,7 +66,7 @@ const SignUp = () => {
 
       console.log(formDataCopy);
 
-      navigate("/edit-profile");
+      navigate("/user-profile");
     } catch (error) {
       console.log(error);
     }
@@ -105,7 +105,7 @@ const SignUp = () => {
           onChange={onChange}
         />
         <input
-          type="text"
+          type="password"
           placeholder="Password"
           id="password"
           value={password}

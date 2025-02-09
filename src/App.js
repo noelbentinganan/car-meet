@@ -7,14 +7,15 @@ import SignIn from "./pages/SignIn";
 import SignUp from "./pages/SignUp";
 import UserProfile from "./pages/UserProfile";
 import ForgotPassword from "./pages/ForgotPassword";
-import EditUserProfile from "./pages/UserProfile";
 
 function App() {
   return (
     <>
       <Router>
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/" element={<PrivateRoute />}>
+            <Route path="/" element={<Home />} />
+          </Route>
           <Route path="/user-profile" element={<PrivateRoute />}>
             <Route path="/user-profile" element={<UserProfile />} />
           </Route>
