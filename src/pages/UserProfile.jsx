@@ -11,7 +11,7 @@ const UserProfile = () => {
   const [userData, setUserData] = useState(null);
 
   const [formData, setFormData] = useState({
-    name: auth.currentUser.displayName,
+    name: auth.currentUser.displayName.split(" ")[0],
     email: auth.currentUser.email,
   });
   const { name, email } = formData;
@@ -29,7 +29,7 @@ const UserProfile = () => {
     };
 
     fetchUser();
-  }, []);
+  }, [auth.currentUser.uid]);
 
   // onChange fn
   const onChange = () => {};

@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useNavigate, Link, Navigate } from "react-router-dom";
 // firebase imports
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
@@ -12,12 +12,14 @@ const SignIn = () => {
 
   const { loggedIn, checkingStatus } = useAuthStatus();
 
-  // React-router-dom init
   const navigate = useNavigate();
 
-  // if (loggedIn) {
-  //   navigate("/");
-  // }
+  // Redirect user to homepage if already logged in
+  useEffect(() => {
+    if (loggedIn) {
+      navigate("/");
+    }
+  });
 
   // onChange fn
   // 1. This will target the input values
@@ -57,36 +59,30 @@ const SignIn = () => {
 
   return (
     <>
-      {loggedIn ? (
-        <Navigate to="/" />
-      ) : (
-        <>
-          <form onSubmit={onSubmit}>
-            <input
-              type="email"
-              id="email"
-              placeholder="Email"
-              value={email}
-              onChange={onChange}
-            />
-            <input
-              type="password"
-              id="password"
-              placeholder="Password"
-              value={password}
-              onChange={onChange}
-            />
+      <form onSubmit={onSubmit}>
+        <input
+          type="email"
+          id="email"
+          placeholder="Email"
+          value={email}
+          onChange={onChange}
+        />
+        <input
+          type="password"
+          id="password"
+          placeholder="Password"
+          value={password}
+          onChange={onChange}
+        />
 
-            <Link to="/forgot-password">Forgot Password</Link>
-            <button>Sign In</button>
-          </form>
-          <Link to="/sign-up" className="registerLink">
-            Sign Up Instead
-          </Link>
+        <Link to="/forgot-password">Forgot Password</Link>
+        <button>Sign In</button>
+      </form>
+      <Link to="/sign-up" className="registerLink">
+        Sign Up Instead
+      </Link>
 
-          <GoogleOAuth />
-        </>
-      )}
+      <GoogleOAuth />
     </>
   );
 };

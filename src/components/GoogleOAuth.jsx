@@ -25,13 +25,12 @@ const GoogleOAuth = () => {
       // Validation - if the snap doest exist or the user does not exist - then, CREATE google user
       if (!docSnap.exists()) {
         await setDoc(doc(db, "users", user.uid), {
-          name: user.displayName,
+          name: user.displayName.split(" ")[0],
           email: user.email,
           timestamp: serverTimestamp(),
         });
       }
-
-      navigate("/user-profile");
+      navigate("/");
     } catch (error) {
       console.log(error);
     }
