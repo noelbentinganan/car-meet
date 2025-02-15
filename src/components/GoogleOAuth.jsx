@@ -1,4 +1,5 @@
 import { useLocation, useNavigate } from "react-router-dom";
+import { FcGoogle } from "react-icons/fc";
 // firebase imports
 import { getAuth, signInWithPopup, GoogleAuthProvider } from "firebase/auth";
 import { doc, setDoc, getDoc, serverTimestamp } from "firebase/firestore";
@@ -36,11 +37,12 @@ const GoogleOAuth = () => {
     }
   };
   return (
-    <div>
-      <p>
-        Sign {location.pathname === "/sign-up" ? "up" : "in"} with{" "}
-        <button onClick={onGoogleClick}>Google</button>
-      </p>
+    <div className="google">
+      <button onClick={onGoogleClick} className="google-btn">
+        {" "}
+        <FcGoogle /> Sign {location.pathname === "/sign-up" ? "up" : "in"} with
+        Google
+      </button>
     </div>
   );
 };

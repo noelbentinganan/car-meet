@@ -73,8 +73,8 @@ const SignUp = () => {
   };
 
   return (
-    <div>
-      Form
+    <div className="su-form-container">
+      <p>Complete your details to join the meet.</p>
       <form onSubmit={onSubmit}>
         <input
           type="text"
@@ -92,8 +92,36 @@ const SignUp = () => {
         />
         <input
           type="text"
-          placeholder="Address"
-          id="address"
+          placeholder="Address Line 1"
+          id="addressLine1"
+          value={address}
+          onChange={onChange}
+        />
+        <input
+          type="text"
+          placeholder="Address Line 2"
+          id="addressLine2"
+          value={address}
+          onChange={onChange}
+        />
+        <input
+          type="text"
+          placeholder="City"
+          id="city"
+          value={address}
+          onChange={onChange}
+        />
+        <input
+          type="text"
+          placeholder="State / Province / Region"
+          id="state"
+          value={address}
+          onChange={onChange}
+        />
+        <input
+          type="number"
+          placeholder="State / Province / Region"
+          id="state"
           value={address}
           onChange={onChange}
         />

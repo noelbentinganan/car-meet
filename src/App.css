@@ -1,38 +1,190 @@
-.App {
-  text-align: center;
+/* fonts */
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap");
+
+/* Custom */
+:root {
+  --appBlack: #18181b;
+  --appWhite: #fff;
+}
+/* END Custom */
+
+/* Util elements */
+button {
+  border-radius: 8px;
+  height: 42px;
+  width: 318px;
+  padding: 4px 8px 4px 8px;
+  background-color: var(--appWhite);
+  margin-bottom: 16px;
+}
+/* END Util elements */
+
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Inter", sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Main */
+.container {
+  height: 100vh;
+  width: 100%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* Sign In Page */
+.si-page {
+  display: flex;
+  align-items: center;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.title-logo {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 480px;
+  padding-left: 260px;
+}
+
+.title-logo h1,
+p {
+  color: var(--appBlack);
+}
+
+.title-logo p {
+  font-size: 20px;
+}
+
+.logo-font {
+  font-family: "Nunito Sans", sans-serif;
+  font-weight: 900;
+  font-size: 66px;
+}
+
+.si-form {
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+}
+
+.si-form-container {
+  display: flex;
+  flex-direction: column;
+  border-left: solid 2px var(--appBlack);
+  align-items: left;
+  padding-left: 32px;
+}
+
+.form-label {
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  padding-top: 24px;
+  padding-bottom: 4px;
+}
+
+.si-form-label {
+  font-size: 20px;
+}
+
+.brand-font {
+  font-family: "Nunito Sans", sans-serif;
+  font-weight: 900;
+}
+
+.forgot-password {
+  font-size: 16px;
+  font-weight: bold;
+  padding-top: 4px;
+  margin-bottom: 16px;
+}
+
+.forgot-password > a {
+  text-decoration: none;
+  color: var(--appBlack);
+  font-size: 12px;
+}
+
+/* Signin Styling */
+input[type="email"] {
+  border: 1px solid #ccc;
+}
+
+input[type="password"] {
+  border: 1px solid #ccc;
+}
+
+.si-input-box {
+  border-radius: 8px;
+  height: 32px;
+  width: 300px;
+  padding: 4px 8px 4px 8px;
+  border: 1px solid var(--appBlack);
+  font-family: "Nunito Sans", sans-serif;
+}
+
+.si-btn {
+  border: 1px solid var(--appBlack);
+  font-family: "Nunito Sans", sans-serif;
+  background-color: var(--appBlack);
+  color: var(--appWhite);
+  font-weight: bold;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+.su-btn > a {
+  border: 1px solid var(--appBlack);
+  font-family: "Nunito Sans", sans-serif;
+  background-color: var(--appBlack);
+  color: var(--appWhite);
+  font-weight: bold;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+.si-btn:hover {
+  background-color: #2b2b31;
+}
+
+.google-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Nunito Sans", sans-serif;
+  font-weight: bold;
+  gap: 10px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+.google-btn:hover {
+  background-color: var(--appBlack);
+  color: var(--appWhite);
+}
+
+.su-link {
+  gap: 5px;
+  font-size: 12px;
+  font-family: "Inter", sans-serif;
+  font-weight: bold;
+}
+
+.su-link a {
+  color: var(--appBlack);
+  text-decoration: none;
+}
+
+/* Sign Up Form  */
+.su-form-container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin-top: 32px;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.su-form-container form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
 }
