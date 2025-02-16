@@ -1,190 +1,112 @@
-/* fonts */
-@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap");
 
-/* Custom */
-:root {
-  --appBlack: #18181b;
-  --appWhite: #fff;
-}
-/* END Custom */
-
-/* Util elements */
-button {
-  border-radius: 8px;
-  height: 42px;
-  width: 318px;
-  padding: 4px 8px 4px 8px;
-  background-color: var(--appWhite);
-  margin-bottom: 16px;
-}
-/* END Util elements */
-
+/* Reset */
 * {
   padding: 0;
   margin: 0;
-  font-family: "Inter", sans-serif;
+  box-sizing: border-box;
 }
 
-/* Main */
-.container {
-  height: 100vh;
-  width: 100%;
+:root {
+  --appBlack: #18181b;
+  --appWhite: #f6f6f6;
+  --primaryFont: "Inter", sans-serif;
+  --brandFont: "Nunito Sans", sans-serif;
 }
 
-/* Sign In Page */
-.si-page {
-  display: flex;
-  align-items: center;
+h1,
+h2 {
+  font-weight: 300;
+  margin: 10px 0;
 }
 
-.title-logo {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  width: 480px;
-  padding-left: 260px;
-}
-
-.title-logo h1,
-p {
-  color: var(--appBlack);
-}
-
-.title-logo p {
-  font-size: 20px;
-}
-
-.logo-font {
-  font-family: "Nunito Sans", sans-serif;
+.brand-text {
   font-weight: 900;
-  font-size: 66px;
+  font-size: 64;
+  font-family: var(--brandFont);
 }
 
-.si-form {
-  width: 400px;
-  display: flex;
-  flex-direction: column;
-}
-
-.si-form-container {
-  display: flex;
-  flex-direction: column;
-  border-left: solid 2px var(--appBlack);
-  align-items: left;
-  padding-left: 32px;
-}
-
-.form-label {
-  font-family: "Nunito Sans", sans-serif;
-  font-size: 16px;
-  font-weight: bold;
-  padding-top: 24px;
-  padding-bottom: 4px;
-}
-
-.si-form-label {
-  font-size: 20px;
+/* Base styles */
+body {
+  font-family: var(--primaryFont);
+  color: var(--appBlack);
+  line-height: 1;
 }
 
 .brand-font {
-  font-family: "Nunito Sans", sans-serif;
+  font-family: var(--brandFont);
   font-weight: 900;
 }
 
-.forgot-password {
-  font-size: 16px;
-  font-weight: bold;
-  padding-top: 4px;
-  margin-bottom: 16px;
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
 }
 
-.forgot-password > a {
-  text-decoration: none;
-  color: var(--appBlack);
-  font-size: 12px;
-}
-
-/* Signin Styling */
-input[type="email"] {
-  border: 1px solid #ccc;
-}
-
-input[type="password"] {
-  border: 1px solid #ccc;
-}
-
-.si-input-box {
-  border-radius: 8px;
-  height: 32px;
-  width: 300px;
-  padding: 4px 8px 4px 8px;
-  border: 1px solid var(--appBlack);
-  font-family: "Nunito Sans", sans-serif;
-}
-
-.si-btn {
-  border: 1px solid var(--appBlack);
-  font-family: "Nunito Sans", sans-serif;
-  background-color: var(--appBlack);
-  color: var(--appWhite);
-  font-weight: bold;
-  transition-duration: 0.4s;
-  cursor: pointer;
-}
-
-.su-btn > a {
-  border: 1px solid var(--appBlack);
-  font-family: "Nunito Sans", sans-serif;
-  background-color: var(--appBlack);
-  color: var(--appWhite);
-  font-weight: bold;
-  transition-duration: 0.4s;
-  cursor: pointer;
-}
-
-.si-btn:hover {
-  background-color: #2b2b31;
-}
-
-.google-btn {
+.flex {
   display: flex;
-  align-items: center;
   justify-content: center;
-  font-family: "Nunito Sans", sans-serif;
-  font-weight: bold;
-  gap: 10px;
-  transition-duration: 0.4s;
-  cursor: pointer;
-}
-
-.google-btn:hover {
-  background-color: var(--appBlack);
-  color: var(--appWhite);
-}
-
-.su-link {
-  gap: 5px;
-  font-size: 12px;
-  font-family: "Inter", sans-serif;
-  font-weight: bold;
-}
-
-.su-link a {
-  color: var(--appBlack);
-  text-decoration: none;
-}
-
-/* Sign Up Form  */
-.su-form-container {
-  display: flex;
-  flex-direction: column;
   align-items: center;
-  margin-top: 32px;
+  height: 100%;
 }
 
-.su-form-container form {
-  display: flex;
-  flex-direction: column;
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: center;
   align-items: center;
-  gap: 16px;
+  height: 100%; /* <-- height: 100% - keep items within the container */
+}
+
+.brand-section {
+  width: 600px;
+  height: 500px;
+  flex-direction: column;
+  align-items: ce;
+}
+
+.form-section {
+  width: 400px;
+  border-left: 1px var(--appBlack) solid;
+  padding: 0 20px;
+}
+
+.form-section input[type="email"],
+.form-section input[type="password"],
+.form-section input[type="submit"] {
+  width: 50%;
+  height: 32px;
+  padding: 2px 4px;
+  border-radius: 4px;
+  border: 1px var(--appBlack) solid;
+  margin: 8px 0;
+  font-family: var(--primaryFont);
+}
+
+.form-section input:focus {
+  outline: none;
+}
+
+/* Utilities */
+.text-xs {
+  font-size: 0.8rem;
+}
+.text-sm {
+  font-size: 1rem;
+}
+
+.text-md {
+  font-size: 1.5rem;
+}
+
+.text-lg {
+  font-size: 2rem;
+}
+
+.text-xl {
+  font-size: 3rem;
+}
+
+.text-xxl {
+  font-size: 4rem;
 }

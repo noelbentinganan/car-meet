@@ -58,48 +58,47 @@ const SignIn = () => {
   };
 
   return (
-    <div className="container si-page">
-      <div className="title-logo">
-        <h1 className="logo-font">Car Meet</h1>
+    <div className="container flex">
+      <section className="brand-section flex">
+        <h1 className="brand-text text-xl">Car Meet</h1>
         <p>Buy, Sell or Rent a car today.</p>
-      </div>
-      <div className="si-form">
-        <div className="si-form-container">
-          <p className="si-form-label">
-            Sign In to join the <span className="brand-font">Car Meet</span>
-          </p>
-          <form onSubmit={onSubmit}>
-            <p className="form-label">Email</p>
-            <input
-              type="email"
-              id="email"
-              placeholder="Email"
-              value={email}
-              onChange={onChange}
-              className="si-input-box"
-            />
-            <p className="form-label">Password</p>
-            <input
-              type="password"
-              id="password"
-              placeholder="Password"
-              value={password}
-              onChange={onChange}
-              className="si-input-box"
-            />
-            <p className="forgot-password">
-              <Link to="/forgot-password">Forgot Password?</Link>
-            </p>
-            <button className="si-btn">Sign In</button>
-          </form>
+      </section>
 
-          <GoogleOAuth />
-
-          <p className="su-link">
-            Don't have an account? <Link to="/sign-up">Sign Up</Link>
+      <section className="form-section">
+        <p>
+          Sign In to join the <span className="brand-font">Car Meet</span>
+        </p>
+        <form onSubmit={onSubmit}>
+          <p className="form-label">Email</p>
+          <input
+            type="email"
+            id="email"
+            placeholder="Email"
+            value={email}
+            onChange={onChange}
+            className="text-xs"
+          />
+          <p className="form-label">Password</p>
+          <input
+            type="password"
+            id="password"
+            placeholder="Password"
+            value={password}
+            onChange={onChange}
+            className="si-input-box"
+          />
+          <p className="forgot-password">
+            <Link to="/forgot-password">Forgot Password?</Link>
           </p>
-        </div>
-      </div>
+          <input type="submit" value="Sign In" />
+        </form>
+
+        <GoogleOAuth />
+
+        <p className="su-link">
+          Don't have an account? <Link to="/sign-up">Sign Up</Link>
+        </p>
+      </section>
     </div>
   );
 };
