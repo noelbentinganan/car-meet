@@ -65,11 +65,11 @@ const SignIn = () => {
       </section>
 
       <section className="form-section">
-        <p>
+        <p className="m-5">
           Sign In to join the <span className="brand-font">Car Meet</span>
         </p>
         <form onSubmit={onSubmit}>
-          <p className="form-label">Email</p>
+          <p className="text-xs label">Email</p>
           <input
             type="email"
             id="email"
@@ -78,7 +78,7 @@ const SignIn = () => {
             onChange={onChange}
             className="text-xs"
           />
-          <p className="form-label">Password</p>
+          <p className="text-xs label">Password</p>
           <input
             type="password"
             id="password"
@@ -88,15 +88,20 @@ const SignIn = () => {
             className="si-input-box"
           />
           <p className="forgot-password">
-            <Link to="/forgot-password">Forgot Password?</Link>
+            <Link className="a-link mb-5" to="/forgot-password">
+              Forgot Password?
+            </Link>
           </p>
-          <input type="submit" value="Sign In" />
+          <input type="submit" className="btn-primary" value="Sign In" />
         </form>
 
         <GoogleOAuth />
 
-        <p className="su-link">
-          Don't have an account? <Link to="/sign-up">Sign Up</Link>
+        <p className="text-xs">
+          Don't have an account?{" "}
+          <Link className="a-link" to="/sign-up">
+            Sign Up
+          </Link>
         </p>
       </section>
     </div>

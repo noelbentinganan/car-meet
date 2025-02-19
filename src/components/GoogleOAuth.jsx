@@ -37,13 +37,11 @@ const GoogleOAuth = () => {
     }
   };
   return (
-    <div className="google">
-      <button onClick={onGoogleClick} className="google-btn">
-        {" "}
-        <FcGoogle /> Sign {location.pathname === "/sign-up" ? "up" : "in"} with
-        Google
-      </button>
-    </div>
+    <button onClick={onGoogleClick} className="google-btn">
+      {" "}
+      <FcGoogle /> Sign {location.pathname === "/sign-up" ? "up" : "in"} with
+      Google
+    </button>
   );
 };
 

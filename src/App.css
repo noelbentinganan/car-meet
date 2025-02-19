@@ -9,6 +9,7 @@
 
 :root {
   --appBlack: #18181b;
+  --appGrey: #2b2b30;
   --appWhite: #f6f6f6;
   --primaryFont: "Inter", sans-serif;
   --brandFont: "Nunito Sans", sans-serif;
@@ -20,10 +21,8 @@ h2 {
   margin: 10px 0;
 }
 
-.brand-text {
-  font-weight: 900;
-  font-size: 64;
-  font-family: var(--brandFont);
+a {
+  text-decoration: none;
 }
 
 /* Base styles */
@@ -38,9 +37,20 @@ body {
   font-weight: 900;
 }
 
+.brand-text {
+  font-weight: 900;
+  font-size: 64;
+  font-family: var(--brandFont);
+}
+
 .container {
   max-width: 1100px;
   margin: 0 auto;
+}
+
+.label {
+  padding-top: 8px;
+  font-weight: bold;
 }
 
 .flex {
@@ -81,10 +91,54 @@ body {
   border: 1px var(--appBlack) solid;
   margin: 8px 0;
   font-family: var(--primaryFont);
+  cursor: pointer;
 }
 
 .form-section input:focus {
   outline: none;
+}
+
+p .a-link {
+  color: var(--appBlack);
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+/* Buttons */
+form .btn-primary {
+  background-color: var(--appBlack);
+  color: var(--appWhite);
+  font-weight: 600;
+}
+
+.google-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 50%;
+  height: 32px;
+  padding: 2px 4px;
+  border-radius: 4px;
+  border: 1px var(--appBlack) solid;
+  background-color: var(--appWhite);
+  margin: 8px 0;
+  font-family: var(--primaryFont);
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.google-btn:hover {
+  background-color: var(--appBlack);
+  color: var(--appWhite);
+}
+
+.btn-primary:hover {
+  background-color: var(--appGrey);
+}
+
+.forgot-password {
+  margin-bottom: 30px;
 }
 
 /* Utilities */
@@ -109,4 +163,50 @@ body {
 
 .text-xxl {
   font-size: 4rem;
+}
+
+/* Margin */
+.my-1 {
+  margin: 1rem 0; /* rem is the root element size. Ex.: root is 16px, so 16px * 1 = 1rem */
+}
+
+.my-2 {
+  margin: 1.5rem 0;
+}
+
+.my-3 {
+  margin: 2rem 0;
+}
+
+.my-4 {
+  margin: 3rem 0;
+}
+
+.my-5 {
+  margin: 4rem 0;
+}
+
+.mb-1 {
+  margin-bottom: 1rem 0; /* rem is the root element size. Ex.: root is 16px, so 16px * 1 = 1rem */
+}
+
+.mb-2 {
+  margin-bottom: 1.5rem 0;
+}
+
+.mb-3 {
+  margin-bottom: 2rem 0;
+}
+
+.mb-4 {
+  margin-bottom: 3rem 0;
+}
+
+.mb-5 {
+  margin-bottom: 4rem 0;
+}
+
+/* Font Colors */
+.text-black {
+  color: var(--appBlack);
 }
