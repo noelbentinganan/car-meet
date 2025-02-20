@@ -58,14 +58,14 @@ const SignIn = () => {
   };
 
   return (
-    <div className="container flex">
-      <section className="brand-section flex">
+    <div className="container flex container-m flex-m">
+      <section className="brand-section flex brand-section-m">
         <h1 className="brand-text text-xl">Car Meet</h1>
         <p>Buy, Sell or Rent a car today.</p>
       </section>
 
       <section className="form-section">
-        <p className="m-5">
+        <p className="m-5 mmb-2">
           Sign In to join the <span className="brand-font">Car Meet</span>
         </p>
         <form onSubmit={onSubmit}>

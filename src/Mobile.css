@@ -1,0 +1,77 @@
+@media screen and (min-width: 361px) and (max-width: 480px) {
+  /* Styles for regular phones */
+  .container-m {
+    max-width: 480px;
+    margin: 0 auto;
+  }
+
+  .flex-m {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .brand-section-m {
+    max-height: 220px;
+  }
+
+  section form {
+    width: 280px;
+  }
+
+  .form-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .form-section input[type="email"],
+  .form-section input[type="password"],
+  .form-section input[type="submit"] {
+    width: 100%;
+    height: 32px;
+    padding: 2px 4px;
+    border-radius: 4px;
+    border: 1px var(--appBlack) solid;
+    margin: 8px 0;
+    font-family: var(--primaryFont);
+    cursor: pointer;
+  }
+
+  .google-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 78%;
+    height: 32px;
+    padding: 2px 4px;
+    border-radius: 4px;
+    border: 1px var(--appBlack) solid;
+    background-color: var(--appWhite);
+    margin: 8px 0;
+    font-family: var(--primaryFont);
+    cursor: pointer;
+    font-weight: 600;
+  }
+
+  /* Margin mobile */
+  .mmb-1 {
+    margin-bottom: 1rem; /* rem is the root element size. Ex.: root is 16px, so 16px * 1 = 1rem */
+  }
+
+  .mmb-2 {
+    margin-bottom: 1.5rem;
+  }
+
+  .mmb-3 {
+    margin-bottom: 2rem;
+  }
+
+  .mmb-4 {
+    margin-bottom: 3rem;
+  }
+
+  .mmb-5 {
+    margin-bottom: 4rem;
+  }
+}

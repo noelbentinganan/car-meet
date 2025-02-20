@@ -1,4 +1,5 @@
 import "./App.css";
+import "./Mobile.css";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import PrivateRoute from "./components/PrivateRoute";
 // Pages
