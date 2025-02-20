@@ -55,6 +55,11 @@
     font-weight: 600;
   }
 
+  .signup-form-m {
+    width: 60%;
+    margin-top: 62px;
+  }
+
   /* Margin mobile */
   .mmb-1 {
     margin-bottom: 1rem; /* rem is the root element size. Ex.: root is 16px, so 16px * 1 = 1rem */
