@@ -128,9 +128,7 @@ const SignUp = () => {
           />
 
           {password !== password1 ? (
-            <p className="password-confirm">
-              Password does not match, please try again.
-            </p>
+            <p className="alert">Password does not match, please try again.</p>
           ) : (
             ""
           )}

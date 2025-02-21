@@ -8,6 +8,7 @@ import useAuthStatus from "../hooks/useAuthStatus";
 const SignIn = () => {
   // formData
   const [formData, setFormData] = useState({ email: "", password: "" });
+  const [error, setError] = useState(null);
   const { email, password } = formData;
 
   const { loggedIn, checkingStatus } = useAuthStatus();
@@ -53,7 +54,7 @@ const SignIn = () => {
         navigate("/");
       }
     } catch (error) {
-      console.log(error);
+      setError("Invalid user credential");
     }
   };
 
@@ -92,6 +93,7 @@ const SignIn = () => {
               Forgot Password?
             </Link>
           </p>
+          <p className="alert">{error}</p>
           <input type="submit" className="btn-primary" value="Sign In" />
         </form>
 

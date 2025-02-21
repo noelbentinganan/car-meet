@@ -10,6 +10,7 @@
 :root {
   --appBlack: #18181b;
   --appGrey: #2b2b30;
+  --appLightGrey: #444449;
   --appWhite: #f6f6f6;
   --appGreen: #acebb2;
   --appLightRed: #fcb3b1;
@@ -33,6 +34,35 @@ body {
   font-family: var(--primaryFont);
   color: var(--appBlack);
   line-height: 1;
+}
+
+/* Navbar */
+.navbar {
+  background-color: var(--appGrey);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 8px 0;
+}
+
+.menu-items {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  gap: 60px;
+}
+
+.menu-item {
+  padding: 16px 24px;
+  border-radius: 8px;
+}
+
+.menu-item:hover {
+  background-color: var(--appLightGrey);
+}
+
+.menu-icon {
+  width: 24px;
 }
 
 .brand-font {
@@ -277,7 +307,7 @@ form .btn-primary {
   margin-top: 4rem;
 }
 
-.password-confirm {
+.alert {
   font-size: 0.6rem;
   margin-bottom: 16px;
   font-weight: 600;
