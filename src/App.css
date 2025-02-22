@@ -57,7 +57,11 @@ body {
   border-radius: 8px;
 }
 
-.menu-item:hover {
+.highlight {
+  background-color: var(--appLightGrey);
+}
+
+.highlight:hover {
   background-color: var(--appLightGrey);
 }
 
