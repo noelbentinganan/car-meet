@@ -4,6 +4,8 @@ import CarHome from "../assets/png/car_home.png";
 import tradeIcon from "../assets/png/tradeIcon.png";
 import saleIcon from "../assets/png/saleIcon.png";
 import rentIcon from "../assets/png/rentIcon.png";
+// test
+import pp from "../assets/mitsuha_pp.jpg";
 // firebase imports
 import { getAuth } from "firebase/auth";
 import { doc, getDoc } from "firebase/firestore";
@@ -12,6 +14,7 @@ import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const auth = getAuth();
+  const user = auth.currentUser;
   const [userData, setUserData] = useState(null);
 
   const location = useLocation();
@@ -82,8 +85,12 @@ const Navbar = () => {
             </Link>
           </li>
         </ul>
-        <div className="user">
-          <p>Hi, {userData?.firstName || " "}</p>
+        <div>
+          {user.photoURL ? (
+            <img src={user.photoURL} alt="Profile" width="100" />
+          ) : (
+            <p>No Profile Picture</p>
+          )}
         </div>
       </nav>
     </>

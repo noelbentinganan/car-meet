@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import { getAuth } from "firebase/auth";
 import { doc, getDoc } from "firebase/firestore";
 import { db } from "../firebase.config";
+import ProfilePictureUpload from "../components/ProfilePictureUpload";
 
 const UserProfile = () => {
   const auth = getAuth(); // <-- Initialize getAuth() to get the currentUser
@@ -38,6 +39,7 @@ const UserProfile = () => {
     <div>
       <h1>Please complete your profile</h1>
       <div>
+        <ProfilePictureUpload />
         <form>
           <input
             type="text"

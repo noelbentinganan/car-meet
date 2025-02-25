@@ -1,5 +1,6 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
+import useAuthStatus from "../hooks/useAuthStatus";
 // firebase imports
 import {
   getAuth,
@@ -21,6 +22,15 @@ const SignUp = () => {
     password1: "",
   });
   const { firstName, lastName, address, email, password, password1 } = formData;
+
+  const { loggedIn, checkingStatus } = useAuthStatus();
+
+  // Redirect user to homepage if already logged in
+  useEffect(() => {
+    if (loggedIn) {
+      navigate("/");
+    }
+  });
 
   const navigate = useNavigate();
 

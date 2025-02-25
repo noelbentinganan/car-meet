@@ -28,7 +28,9 @@ function App() {
           <Route path="/category/rent" element={<Rent />} />
           <Route path="/forgot-password" element={<ForgotPassword />} />
           <Route path="/sign-in" element={<SignIn />} />
-          <Route path="/sign-up" element={<SignUp />} />
+          <Route path="/sign-up" element={<PrivateRoute />}>
+            <Route path="/sign-up" element={<SignUp />} />
+          </Route>
         </Routes>
       </Router>
     </>

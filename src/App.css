@@ -37,6 +37,11 @@ body {
 }
 
 /* Navbar */
+.home {
+  background-color: var(--appLightGrey);
+  height: 100vh;
+}
+
 .navbar {
   background-color: var(--appGrey);
   display: flex;
@@ -142,6 +147,13 @@ p .a-link {
   color: var(--appBlack);
   font-size: 0.8rem;
   font-weight: 600;
+}
+
+/* User */
+.avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
 }
 
 /* Sign Up Form */
